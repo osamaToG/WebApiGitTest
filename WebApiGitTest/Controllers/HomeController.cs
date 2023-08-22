@@ -8,5 +8,9 @@ namespace WebApiGitTest.Controllers
         {
             return View();
         }
+        public IActionResult Test()
+        {
+            return View();
+        }
     }
 }
