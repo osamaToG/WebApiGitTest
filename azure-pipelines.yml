@@ -32,17 +32,9 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-- task: IISWebAppManagementOnMachineGroup@0
+- task: IISWebAppDeploymentOnMachineGroup@0
   inputs:
-    EnableIIS: true
-    WebsiteName: ''
-    AppPoolNameForWebsite: ''
-    ParentWebsiteNameForApplication: ''
-    Bindings: 'b'
-    AppPoolName: 'ddd'
-    AppPoolNameForApplication: 'd'
-    VirtualPathForApplication: ''
-    IISDeploymentType: 'IISVirtualDirectory'
-    ParentWebsiteNameForVD: 'Test'
-    VirtualPathForVD: 'Site/Test'
-    PhysicalPathForVD: '%SystemDrive%\inetpub\wwwroot'
+    WebSiteName: 'test'
+    VirtualApplication: 'test'
+    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
+    XmlTransformation: true
