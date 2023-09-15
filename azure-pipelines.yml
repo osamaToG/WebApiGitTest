@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln'
+  solution: 'WebApiGitTest.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
@@ -36,5 +36,5 @@ steps:
   inputs:
     WebSiteName: 'test'
     VirtualApplication: 'test'
-    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
+    Package: '$(System.DefaultWorkingDirectory)\WebApp.zip'
     XmlTransformation: true
